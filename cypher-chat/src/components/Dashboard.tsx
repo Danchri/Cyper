@@ -1,17 +1,16 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { 
-  Shield, 
-  Send, 
-  Eye, 
-  EyeOff, 
-  Settings, 
-  LogOut, 
-  User, 
-  Lock, 
+import {
+  Shield,
+  Send,
+  Eye,
+  EyeOff,
+  Settings,
+  LogOut,
+  User,
+  Lock,
   AlertTriangle,
   Trash2,
-  MoreVertical,
   Search
 } from 'lucide-react'
 

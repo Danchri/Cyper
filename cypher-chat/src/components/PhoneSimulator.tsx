@@ -13,10 +13,8 @@ import {
   MoreVertical,
   Phone,
   Video,
-  Settings,
   Search,
-  Image,
-  Paperclip
+  Image
 } from 'lucide-react'
 
 interface Message {
