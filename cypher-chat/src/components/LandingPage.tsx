@@ -434,13 +434,26 @@ const LandingPage = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                  plan.popular 
-                    ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl' 
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                }`}>
-                  {plan.cta}
-                </button>
+                {plan.cta === 'Contact Sales' ? (
+                  <Link
+                    to="/contact-sales"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-center block ${
+                      plan.popular
+                        ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl'
+                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                    }`}
+                  >
+                    {plan.cta}
+                  </Link>
+                ) : (
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}>
+                    {plan.cta}
+                  </button>
+                )}
               </div>
             ))}
           </div>
@@ -460,9 +473,12 @@ const LandingPage = () => {
             <Link to="/demo" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
               Start Free Trial
             </Link>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200">
+            <Link
+              to="/contact-sales"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200 inline-block"
+            >
               Contact Sales
-            </button>
+            </Link>
           </div>
         </div>
       </section>
